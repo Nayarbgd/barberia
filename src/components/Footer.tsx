@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Phone, MapPin, Instagram, MessageCircle, ExternalLink } from 'lucide-react'
+import logo from '/logo/logo.png'
 
 const WA_LINK = `https://wa.me/97145896390?text=Hello%20Black%20Mustache%20Gents%20Salon%2C%0A%0AI%20would%20like%20to%20book%20an%20appointment.%0A%0AName%3A%0AService%3A%0APreferred%20Date%3A%0APreferred%20Time%3A%0A%0AThank%20you.`
 
@@ -8,7 +9,14 @@ export default function Footer() {
     <footer className="bg-black border-t border-gold/20 py-16 px-4">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="md:col-span-2">
-          <h3 className="font-serif text-2xl text-gold font-bold mb-4">BLACK MUSTACHE</h3>
+          <Link to="/">
+            <img
+              src={logo}
+              alt="Black Mustache Gents Salon"
+              className="h-20 w-auto object-contain mb-4"
+              style={{ filter: 'brightness(0) invert(1)' }}
+            />
+          </Link>
           <p className="text-gray-400 text-sm leading-relaxed mb-2">
             Dubai's premier gents salon in Jumeirah Village Circle. Where precision meets luxury grooming.
           </p>
